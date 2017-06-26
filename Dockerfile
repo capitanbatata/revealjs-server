@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir -p /usr/src/presentation
 WORKDIR /usr/src/presentation
-COPY package.json /usr/src/presentation/
 VOLUME ["/usr/src/presentation"]
 
 WORKDIR /tmp
@@ -19,5 +18,4 @@ WORKDIR /revealjs
 run mkdir presentation
 RUN npm install
 
-EXPOSE 8080
 CMD [ "npm", "start" ]
